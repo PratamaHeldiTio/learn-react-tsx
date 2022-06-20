@@ -16,9 +16,9 @@ const Youtube = ({ time, title, desc }: IPropsYoutube) => {
   )
 }
 
-Youtube.defaultProps = {
-  time: '00.00',
-  title: 'title here',
-  desc: 'desc here'
-}
+// Youtube.defaultProps = {
+//   time: '00.00',
+//   title: 'title here',
+//   desc: 'desc here'
+// }
 export default Youtube
