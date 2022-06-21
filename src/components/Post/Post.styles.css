@@ -1,0 +1,36 @@
+.post {
+  width: 500px;
+  padding: 10px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  margin: 0 0 20px 20px;
+  display: flex;
+}
+
+.post__image {
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.post__image img {
+  object-fit: cover;
+}
+
+.post__content {
+  flex: 1;
+}
+
+.post__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: darkslategrey;
+  margin-bottom: 16px;
+}
+
+.post__desc {
+  margin: 0;
+  font-size: 16px;
+  color: darkslategrey;
+}

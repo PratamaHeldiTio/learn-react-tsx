@@ -1,11 +1,12 @@
-import React from "react";
-import Youtube from "../../components/Youtube";
-import Product from "../Product";
+// import React from "react";
+// import Youtube from "../../components/Youtube";
+// import Product from "../Product";
+import BlogPosts from "../BlogPosts";
 
 const Home = () => {
   return (
     <>
-      <Youtube 
+      {/* <Youtube 
         time="5.04" 
         title="React dasar part 1" 
         desc="2x ditonton. 2 hari yang lalu" 
@@ -29,7 +30,9 @@ const Home = () => {
 
       <h1>Product</h1>
       <hr />
-      <Product />
+      <Product /> */}
+
+      <BlogPosts />
     </>
   );
 }
