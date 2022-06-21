@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios'
 import './BlogPosts.styles.css';
 import Post from '../../components/Post'
 import { IStateBlogPosts } from './BlogPosts.types'
@@ -9,26 +10,37 @@ class BlogPosts extends React.Component<{}, IStateBlogPosts> {
     this.state = {
       posts: []
     }
+
+    this.handlerRemove = this.handlerRemove.bind(this)
   }
   
+  getRestAPI() {
+    axios.get(`${process.env.REACT_APP_BASEURL_API}`)
+    .then((result) => {
+      this.setState({
+        posts: result.data
+      })
+    });
+  }
 
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-     .then((responseJson) => responseJson.json())
-     .then((response) => {
-        this.setState({
-          posts: response
-        });
-     })
+    this.getRestAPI()
   }
- 
+
+  handlerRemove(id: number) {
+    axios.delete(`${process.env.REACT_APP_BASEURL_API}${id}`)
+    .then(() => {
+      this.getRestAPI()
+    })
+  }
+
   render() {
     return (
       <>
         <p className="title">Blog Post</p>
         {
           this.state.posts.map((post) => {
-            return <Post title={ post.title } desc={ post.body } key={ post.id } />
+            return <Post data={post} key={post.id} remove={this.handlerRemove} />
           })
         }
       </>

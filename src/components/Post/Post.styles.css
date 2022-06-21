@@ -34,3 +34,19 @@
   font-size: 16px;
   color: darkslategrey;
 }
+
+.button {
+  padding: 12px 18px;
+  border-radius: 4px;
+  margin-top: 1rem;
+  border: none;
+}
+
+.button--danger {
+  background: red;
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+}

@@ -1,4 +1,8 @@
 export interface IPropsPost {
-  title?: string;
-  desc?: string;
+  data: {
+    id: number;
+    title: string;
+    body:string;
+  };
+  remove(value: number): any
 }

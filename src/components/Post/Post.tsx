@@ -9,8 +9,9 @@ const Post = (props: IPropsPost) => {
         <img src="https://placeimg.com/200/150/tech" alt="dummy" />
       </div>
       <div className="post__content">
-        <p className="post__title">{ props.title }</p>
-        <p className="post__desc">{ props.desc }</p>
+        <p className="post__title">{ props.data.title }</p>
+        <p className="post__desc">{ props.data.body }</p>
+        <button className="button button--danger" onClick={() => props.remove(props.data.id)}>Remove</button>
       </div>
     </div>
   )
