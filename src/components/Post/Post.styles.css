@@ -38,12 +38,16 @@
 .button {
   padding: 12px 18px;
   border-radius: 4px;
-  margin-top: 1rem;
+  margin: 1rem .5rem 0 .5rem;
   border: none;
 }
 
 .button--danger {
-  background: red;
+  background: #E91E63;
+  color: white;
+}
+.button--success {
+  background: #8BC34a;
   color: white;
 }
 

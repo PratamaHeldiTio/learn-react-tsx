@@ -8,4 +8,12 @@ export interface BlogPostItem {
 export interface IStateBlogPosts {
   posts: BlogPostItem[];
   formBlogPost: BlogPostItem;
+  isUpdate: boolean;
 }
+
+export const DefaultState: BlogPostItem = {
+  userId: 1,
+  id: 0,
+  title: '',
+  body: '',
+};
