@@ -4,5 +4,5 @@ export interface IPropsPost {
     title: string;
     body:string;
   };
-  remove(value: number): any
+  remove(value: number): void;
 }

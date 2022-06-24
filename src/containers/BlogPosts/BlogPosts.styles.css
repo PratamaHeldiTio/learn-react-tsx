@@ -3,3 +3,41 @@
   margin-left: 20px;
   font-size: 24px;
 }
+
+.form {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  margin-left: 20px;
+  padding: 10px;
+  margin-bottom: 50px;
+  border-radius: 4px;
+}
+
+.form label {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form input, .form textarea {
+  outline: none;
+  border: 1px solid #607D8B;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #607D8B;
+}
+
+.btn-submit {
+  outline: none;
+  border: 1px solid #2196F3;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #2196F3;
+}

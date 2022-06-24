@@ -1,6 +1,6 @@
-import React from "react";
-import './Post.styles.css'
-import { IPropsPost } from "./Post.types";
+import React from 'react';
+import './Post.styles.css';
+import { IPropsPost } from './Post.types';
 
 const Post = (props: IPropsPost) => {
   return (
@@ -14,7 +14,7 @@ const Post = (props: IPropsPost) => {
         <button className="button button--danger" onClick={() => props.remove(props.data.id)}>Remove</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Post;

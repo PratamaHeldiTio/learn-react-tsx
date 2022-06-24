@@ -1,7 +1,7 @@
-import React from "react";
-import './Youtube.styles.css'
-import thumb from './thumb.jpg'
-import { IPropsYoutube } from './Youtube.types'
+import React from 'react';
+import './Youtube.styles.css';
+import thumb from './thumb.jpg';
+import { IPropsYoutube } from './Youtube.types';
 
 const Youtube = ({ time, title, desc }: IPropsYoutube) => {
   return (
@@ -13,12 +13,12 @@ const Youtube = ({ time, title, desc }: IPropsYoutube) => {
       <p className="youtube__title">{ title }</p>
       <p className="youtube__desc">{ desc }</p>
     </div>
-  )
-}
+  );
+};
 
 // Youtube.defaultProps = {
 //   time: '00.00',
 //   title: 'title here',
 //   desc: 'desc here'
 // }
-export default Youtube
+export default Youtube;

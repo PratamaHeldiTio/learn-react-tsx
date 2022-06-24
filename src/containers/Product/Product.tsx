@@ -1,21 +1,21 @@
 import React from 'react';
 import './Product.styles.css';
-import { IStateProduct } from './Product.types'
-import { CardProduct } from './Partials'
+import { IStateProduct } from './Product.types';
+import { CardProduct } from './Partials';
 
 class Product extends React.Component<{}, IStateProduct> {
   constructor(props: {}) {
     super(props);
     this.state = {
-      order: 0
-    }
+      order: 0,
+    };
   }
 
   counterChangeHandler = (order: number) => {
     this.setState({
-      order: order
-    })
-  }
+      order: order,
+    });
+  };
 
   render() {
     return (
@@ -31,7 +31,7 @@ class Product extends React.Component<{}, IStateProduct> {
         </div>
         <CardProduct  onCounterChange={(order: number) => this.counterChangeHandler(order)} />
       </>
-    )
+    );
   }
 }
 

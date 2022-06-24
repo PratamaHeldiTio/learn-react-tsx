@@ -3,5 +3,5 @@ export interface IStateProduct {
 }
 
 export interface IPropsProduct {
-  onCounterChange(value: number): any
+  onCounterChange(value: number): void
 }

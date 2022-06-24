@@ -1,7 +1,7 @@
-// import React from "react";
+import React from 'react';
 // import Youtube from "../../components/Youtube";
 // import Product from "../Product";
-import BlogPosts from "../BlogPosts";
+import BlogPosts from '../BlogPosts';
 
 const Home = () => {
   return (
@@ -35,6 +35,6 @@ const Home = () => {
       <BlogPosts />
     </>
   );
-}
+};
 
 export default Home;

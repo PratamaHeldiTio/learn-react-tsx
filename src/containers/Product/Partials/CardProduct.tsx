@@ -1,36 +1,36 @@
 import React from 'react';
 import '../Product.styles.css';
-import { IStateProduct, IPropsProduct } from '../Product.types'
+import { IStateProduct, IPropsProduct } from '../Product.types';
 
 class CardProduct extends React.Component<IPropsProduct, IStateProduct> {
   constructor(props: IPropsProduct) {
     super(props);
     this.state = {
-      order: 0
-    }
+      order: 0,
+    };
   }
 
   counterChangeHandler = (order: number) => {
-    this.props.onCounterChange(order)
-  }
+    this.props.onCounterChange(order);
+  };
 
   plusButtonHandler = () => {
     this.setState((prevState) => ({ 
-      order: prevState.order + 1
+      order: prevState.order + 1,
     }), () => {
-      this.counterChangeHandler(this.state.order)
+      this.counterChangeHandler(this.state.order);
     });
-  }
+  };
 
   minusButtonHandler = () => {
     if (this.state.order > 0) {
       this.setState((prevState) => ({ 
-        order: prevState.order - 1
+        order: prevState.order - 1,
       }), () => {
-        this.counterChangeHandler(this.state.order)
+        this.counterChangeHandler(this.state.order);
       });
     }
-  }
+  };
 
   render() {
     return (
@@ -46,7 +46,7 @@ class CardProduct extends React.Component<IPropsProduct, IStateProduct> {
           <button className="plus" onClick={this.plusButtonHandler}>+</button>
         </div>
       </div>
-    )
+    );
   }
 }
 
