@@ -41,3 +41,7 @@
   text-transform: uppercase;
   color: #2196F3;
 }
+
+.btn-submit:hover {
+  cursor: pointer;
+}

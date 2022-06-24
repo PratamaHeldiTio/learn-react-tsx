@@ -19,13 +19,23 @@ class BlogPosts extends React.Component<{}, IStateBlogPosts> {
   }
   
   getRestAPI() {
-    axios.get(`${process.env.REACT_APP_BASEURL_API}`)
+    axios.get(`${process.env.REACT_APP_BASEURL_API}?_sort=id&_order=desc`)
       .then((result) => {
         this.setState({
           posts: result.data,
         });
       });
   }
+
+  postDataAPIHandler = () => {
+    axios.post(`${process.env.REACT_APP_BASEURL_API}`, this.state.formBlogPost)
+      .then((response) => {
+        console.log(response);
+        this.getRestAPI();
+      
+      })
+      .catch((err) => console.log('error', err)); 
+  };
 
   componentDidMount() {
     this.getRestAPI();
@@ -56,6 +66,19 @@ class BlogPosts extends React.Component<{}, IStateBlogPosts> {
     }));
   };
 
+  handleSubmit = () => {
+    const id = + new Date();
+    this.setState((prevState) => ({
+      formBlogPost: {
+        ...prevState.formBlogPost,
+        id: id,
+      },
+    }), () => {
+      console.log(this.state.formBlogPost);
+      this.postDataAPIHandler();
+    });
+  };
+
   render() {
     return (
       <>
@@ -65,7 +88,7 @@ class BlogPosts extends React.Component<{}, IStateBlogPosts> {
           <input type="text" name="title" placeholder="add title" onChange={this.handleInputChange} />
           <label htmlFor="body-content">body</label>
           <textarea name="body-content" id="body-content" placeholder="add body content" cols={30} rows={10} onChange={this.handleTextareaChange} />
-          <button className="btn-submit">Kirim</button>
+          <button className="btn-submit" onClick={this.handleSubmit}>Kirim</button>
         </div>
         {
           this.state.posts.map((post) => {
