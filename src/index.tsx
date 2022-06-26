@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import Youtube from './components/Youtube';
 import reportWebVitals from './reportWebVitals';
-import Home from './containers/Home';
+import HomePage from './pages' 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <Home />
+    <HomePage />
   </React.StrictMode>,
 );
 

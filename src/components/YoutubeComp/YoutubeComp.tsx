@@ -1,9 +1,9 @@
 import React from 'react';
-import './Youtube.styles.css';
+import './YoutubeComp.styles.css';
 import thumb from './thumb.jpg';
-import { IPropsYoutube } from './Youtube.types';
+import { IPropsYoutube } from './YoutubeComp.types';
 
-const Youtube = ({ time, title, desc }: IPropsYoutube) => {
+const YoutubeComp = ({ time, title, desc }: IPropsYoutube) => {
   return (
     <div className="youtube__wrapper">
       <div className="youtube__image">
@@ -16,9 +16,9 @@ const Youtube = ({ time, title, desc }: IPropsYoutube) => {
   );
 };
 
-// Youtube.defaultProps = {
-//   time: '00.00',
-//   title: 'title here',
-//   desc: 'desc here'
-// }
-export default Youtube;
+YoutubeComp.defaultProps = {
+  time: '00.00',
+  title: 'title here',
+  desc: 'desc here',
+};
+export default YoutubeComp;
