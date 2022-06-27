@@ -4,6 +4,8 @@ import YoutubePage from './youtube';
 import ProductPage from './product';
 import BlogPostPage from './blogpost';
 import Navbar from '../container/Navbar';
+import { DetailBlogpost } from '../container/BlogPosts/Partials';
+import NotFound from './NotFound';
 
 
 const HomePage = () => {
@@ -12,8 +14,10 @@ const HomePage = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<BlogPostPage />} />
+        <Route path='/detail-blog/:id' element={<DetailBlogpost />} />
         <Route path='/product' element={<ProductPage />} />
         <Route path='/youtube' element={<YoutubePage />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

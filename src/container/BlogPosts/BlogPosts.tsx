@@ -131,7 +131,14 @@ class BlogPosts extends React.Component<{}, IStateBlogPosts> {
         </div>
         {
           this.state.posts.map((post) => {
-            return <Post data={post} key={post.id} remove={this.handleRemove} update={this.handleUpdate} />;
+            return (
+              <Post 
+                data={post} 
+                key={post.id} 
+                remove={this.handleRemove} 
+                update={this.handleUpdate}
+              />
+            );
           })
         }
       </>

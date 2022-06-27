@@ -17,3 +17,12 @@ export const DefaultState: BlogPostItem = {
   title: '',
   body: '',
 };
+
+export interface DetailBlogpostProps {
+  goDetail(id: number): void;
+}
+
+export interface DetailBlogpostState {
+  title: string;
+  body: string;
+}

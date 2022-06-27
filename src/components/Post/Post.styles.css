@@ -29,6 +29,10 @@
   margin-bottom: 16px;
 }
 
+.post__title:hover {
+  cursor: pointer;;
+}
+
 .post__desc {
   margin: 0;
   font-size: 16px;
