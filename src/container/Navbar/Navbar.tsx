@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './Navbar.style.css';
+import { NavbarStyled } from './Navbar.styles';
 
 const Navbar = () => {
   return (
-    <nav>
+    <NavbarStyled>
       <Link to="/">Home</Link>
       <Link to="/product">Product</Link>
       <Link to="/youtube">Youtube</Link>
-    </nav>
+    </NavbarStyled>
   );
 };
 

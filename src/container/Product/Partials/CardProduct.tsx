@@ -1,5 +1,12 @@
 import React from 'react';
-import '../Product.styles.css';
+import {
+  Card,
+  CardImage,
+  CardTitle,
+  CardPrice,
+  CardCounter,
+  ButtonCount,
+} from '../Product.styles';
 import { IStateProduct, IPropsProduct } from '../Product.types';
 
 class CardProduct extends React.Component<IPropsProduct, IStateProduct> {
@@ -34,18 +41,18 @@ class CardProduct extends React.Component<IPropsProduct, IStateProduct> {
 
   render() {
     return (
-      <div className="card">
-        <div className="card__image">
+      <Card>
+        <CardImage>
           <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/MTA-2498302/bango_bango_kecap_manis_-220_ml-_flatpack-_67019477-_full01_rs2i4jwm.jpeg" alt="" />
-        </div>
-        <p className="card__title">Kecap bango</p>
-        <p className="card__price">Rp 10.500</p>
-        <div className="card__counter">
-          <button className="minus" onClick={this.minusButtonHandler}>-</button>
+        </CardImage>
+        <CardTitle>Kecap bango</CardTitle>
+        <CardPrice>Rp 10.500</CardPrice>
+        <CardCounter>
+          <ButtonCount className="minus" onClick={this.minusButtonHandler}>-</ButtonCount>
           <input type="text" value={this.state.order} />
-          <button className="plus" onClick={this.plusButtonHandler}>+</button>
-        </div>
-      </div>
+          <ButtonCount className="plus" onClick={this.plusButtonHandler}>+</ButtonCount>
+        </CardCounter>
+      </Card>
     );
   }
 }

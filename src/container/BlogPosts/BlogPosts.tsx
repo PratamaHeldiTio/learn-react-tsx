@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import './BlogPosts.styles.css';
+import {
+  Title,
+  Form,
+  ButtonSubmit,
+} from './BlogPosts.styles';
 import Post from '../../components/Post';
 import { 
   IStateBlogPosts, 
@@ -107,8 +111,8 @@ class BlogPosts extends React.Component<{}, IStateBlogPosts> {
   render() {
     return (
       <>
-        <p className="title">Blog Post</p>
-        <div className="form">
+        <Title>Blog Post</Title>
+        <Form>
           <label htmlFor="title">Title</label>
           <input 
             type="text" 
@@ -127,8 +131,8 @@ class BlogPosts extends React.Component<{}, IStateBlogPosts> {
             rows={10} 
             onChange={this.handleTextareaChange} 
           />
-          <button className="btn-submit" onClick={this.handleSubmit}>Kirim</button>
-        </div>
+          <ButtonSubmit onClick={this.handleSubmit}>Kirim</ButtonSubmit>
+        </Form>
         {
           this.state.posts.map((post) => {
             return (
