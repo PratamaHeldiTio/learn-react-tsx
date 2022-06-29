@@ -4,8 +4,9 @@ import {
   ButtonCount,
 } from '../Product.styles';
 import { IPropsCard, IDispatch } from '../Product.types';
-import { IStateRedux } from '../../../index.types';
+import { IStateRedux } from '../../../store/store.types';
 import { connect } from 'react-redux';
+import actionType from '../../../store/reducer/actionType';
 
 
 class Counter extends React.Component<IPropsCard> {
@@ -58,8 +59,8 @@ const mapStateToProps = (state: IStateRedux) => {
 
 const mapDispatchToProps = (dispatch: IDispatch) => {
   return {
-    handlePlus: () => dispatch({ type: 'PLUS_ORDER' }),
-    handleMinus: () => dispatch({ type: 'MINUS_ORDER' }),
+    handlePlus: () => dispatch({ type: actionType.PLUS_ORDER }),
+    handleMinus: () => dispatch({ type: actionType.MINUS_ORDER }),
   };
 };
 

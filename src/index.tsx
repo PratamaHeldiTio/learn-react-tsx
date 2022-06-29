@@ -5,35 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import App from './App';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { IStateRedux } from './index.types';
-
-// * state management
-
-const initState: IStateRedux = {
-  totalOrder: 0,
-};
-
-// * Reducer
-const rootReducer = (state = initState, action = { type: {} }) => {
-  if (action.type === 'PLUS_ORDER') {
-    return {
-      ...state,
-      totalOrder: state.totalOrder + 1,
-    };
-  }
-  
-  if (action.type === 'MINUS_ORDER') {
-    let totalOrder = 0; 
-    if (state.totalOrder > 0) {
-      totalOrder = state.totalOrder - 1;
-      return {
-        ...state,
-        totalOrder: totalOrder,
-      };
-    }
-  }
-  return state;
-};
+import { rootReducer } from './store';
 
 const reduxStore = createStore(rootReducer);
 

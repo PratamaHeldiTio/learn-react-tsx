@@ -9,7 +9,7 @@ import { CardProduct } from './Partials';
 import { IPropsProduct } from './Product.types';
 
 import { connect } from 'react-redux';
-import { IStateRedux } from '../../index.types';
+import { IStateRedux } from '../../store/store.types';
 
 
 const Product = (props:IPropsProduct) => {
